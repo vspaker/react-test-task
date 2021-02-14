@@ -26,7 +26,7 @@ function Table (props) {
                 </tr>
             </thead>
             <tbody>
-                { props.data.map(item => (
+                { props.data ? props.data.map(item => (
                     <tr key={item.id + item.phone}  onClick={props.onRowSelect.bind(null, item)}>
                         <td>{item.id}</td>
                         <td>{item.firstName}</td>
@@ -34,14 +34,14 @@ function Table (props) {
                         <td>{item.email}</td>
                         <td>{item.phone}</td>
                     </tr>
-                ))}
+                )) : null}
             </tbody>
         </table>
     )
 } 
 
 Table.propTypes = {
-    data: PropTypes.arrayOf(PropTypes.object).isRequired,
+    data: PropTypes.arrayOf(PropTypes.object),
     onSort: PropTypes.func.isRequired,
     sort: PropTypes.string.isRequired,
     sortField: PropTypes.string.isRequired
