@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 function Table (props) {
     return (
@@ -26,5 +27,9 @@ function Table (props) {
         </table>
     )
 } 
+
+Table.propTypes = {
+    data: PropTypes.arrayOf(PropTypes.object).isRequired
+}
 
 export default Table
