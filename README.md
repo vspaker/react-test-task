@@ -1,6 +1,6 @@
 ## Тестовое задание на позицию Junior Frontend Developer (приложение на React)
 
-Для запуска проекта нужно установить npm и несколько зависимостей:
+Для запуска проекта:
 
 * `npm install`
 * `npm install --save prop-types`
